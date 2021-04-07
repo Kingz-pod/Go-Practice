@@ -1,11 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"go/src/variable_1"
+	"go/src/Type_Data"
 )
 
 func main() {
-	a, b := variable_1.Variable_4()
-	fmt.Println(a, b)
+	Type_Data.Arr()
+
 }

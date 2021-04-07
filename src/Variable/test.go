@@ -1,4 +1,4 @@
-package variable_1
+package Variable
 
 //第一种var 关键字定义遍历
 func Var_variable() (string, string, string) {
@@ -31,4 +31,15 @@ func Variable_4() (int, int) {
 	return a, b
 }
 
-//第五种，声明指针变量
+//第五种，声明指针
+func Variable_5() int {
+	p := new(int) //声明一个指针p
+	*p = 123      //给地址赋值
+	return *p
+}
+
+//匿名变量，可以不用到的变量，占位
+func Variable_6() int {
+	a, _ := 123, 123 //下划线占位
+	return a
+}

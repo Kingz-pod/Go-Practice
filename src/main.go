@@ -1,10 +1,12 @@
 package main
 
 import (
-	"go/src/Type_Data"
+	"fmt"
+	"go/src/Object_oriented"
 )
 
 func main() {
-	Type_Data.Arr()
-
+	myschool := Object_oriented.School{School_name: "超级学院", School_address: "天堂国1号"}
+	myclass := Object_oriented.Class{Class_name: "七班", School: myschool}
+	fmt.Println(myclass.School_address)
 }

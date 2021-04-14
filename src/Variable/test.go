@@ -1,5 +1,9 @@
 package Variable
 
+/*
+说在前面：方法名大写表示Public，其他包可以调用，小写则只能本包调用。结构体中的变量也是如此。
+*/
+
 //第一种var 关键字定义遍历
 func Var_variable() (string, string, string) {
 	var a = "test"        //编译器自动识别成string
@@ -32,10 +36,12 @@ func Variable_4() (int, int) {
 }
 
 //第五种，声明指针
-func Variable_5() int {
+func Variable_5() *int {
 	p := new(int) //声明一个指针p
 	*p = 123      //给地址赋值
-	return *p
+
+	//当然你也可以先对a赋值，然后直接p=&a 这样也可以定义一个指针变量
+	return p
 }
 
 //匿名变量，可以不用到的变量，占位

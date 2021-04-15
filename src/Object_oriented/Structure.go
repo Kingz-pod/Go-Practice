@@ -28,6 +28,7 @@ func (p *Person) Eat() {
 	fmt.Printf("%s今年%d岁，现在正在吃饭。", p.Name, p.Age)
 }
 
+//关于继承
 //前面说了，struct只有变量，所以没有继承。原因就是推荐使用组合代替继承
 //组合就是把一个结构体嵌入到另外一个结构体
 type School struct {

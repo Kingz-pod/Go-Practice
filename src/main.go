@@ -1,12 +1,16 @@
 package main
 
 import (
-	"fmt"
 	"go/src/Object_oriented"
 )
 
 func main() {
-	myschool := Object_oriented.School{School_name: "超级学院", School_address: "天堂国1号"}
-	myclass := Object_oriented.Class{Class_name: "七班", School: myschool}
-	fmt.Println(myclass.School_address)
+	mydog := Object_oriented.Dog{Name: "小狗", Age: 3}
+	mycat := Object_oriented.Cat{Name: "小猫", Age: 3}
+	mydog.Wang()
+	//定义一个Animal类型的切片，由于用的指针实现的接口方法，所以这里必须使用结构体指针
+	myanimal := []Object_oriented.Animal{&mydog, &mycat}
+	myanimal[0].Eat()
+	myanimal[0].Eat()
+	myanimal[1].Eat()
 }

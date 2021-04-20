@@ -1,7 +1,18 @@
-package Variable
+//普通变量定义
+package variable
 
 /*
-说在前面：方法名大写表示Public，其他包可以调用，小写则只能本包调用。结构体中的变量也是如此。
+说在前面：表示Public，其他包可以调用，小写则只能本包调用。变量、结构体、类型、常量均如此
+
+1、go文件名和包名均小写
+2、每个go文件仅能属于一个包，在开头指定package xxx即可。
+3、init函数会在调用当前包时最先执行
+func init(){
+}
+4、Go中没有隐形的类型转换，必须手动调用函数
+a := 3.00
+str_a := int(a)   //如果int转string的话，会变成对应ascii值对应的字符。想转得用strconv包
+
 */
 
 //第一种var 关键字定义遍历
@@ -37,6 +48,7 @@ func Variable_4() (int, int) {
 
 //第五种，声明指针
 func Variable_5() *int {
+	//var p *int 这样声明指针也行
 	p := new(int) //声明一个指针p
 	*p = 123      //给地址赋值
 
